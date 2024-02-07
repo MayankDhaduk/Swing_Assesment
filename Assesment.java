@@ -156,7 +156,7 @@ public class Assesment {
 				String m1=MOBILE.getText();
 				
 				try {
-					if(i1.equals(null)|| i1.equals(" "))
+					if(i1.equals(null)|| i1.equals(""))
 					{
 					PreparedStatement ps=cn.prepareStatement("insert into crud values(?,?,?,?,?)");
 					ps.setInt(1, 0);
@@ -240,7 +240,7 @@ public class Assesment {
 					else
 					{
 						
-						JOptionPane.showMessageDialog(frame, "ID NOT FOUND...");
+						JOptionPane.showMessageDialog(frame, "ID NOT FOUND!!!");
 						
 					}
 					
@@ -263,7 +263,7 @@ public class Assesment {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-	String i1=ID.getText();
+				String i1=ID.getText();
 				
 				int ID=Integer.parseInt(i1);
 				
@@ -282,6 +282,12 @@ public class Assesment {
 						MOBILE.setText(rs.getString(5));
 						
 					}
+					else
+					{
+
+						JOptionPane.showMessageDialog(frame, "ID NOT FOUND!!!");
+						
+					}	
 					
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
